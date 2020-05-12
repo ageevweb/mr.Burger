@@ -16,7 +16,7 @@ const paths = {
         src: './src/views/**/*.pug',
         dest: './dist'
     },
-    styles: { 
+    styles: {
         main: './src/assets/styles/main.scss',
         src: './src/assets/styles/**/*.scss',
         dest: './dist/assets/styles'
@@ -24,6 +24,18 @@ const paths = {
     scripts: {
         src: './src/assets/scripts/*.js',
         dest: './dist/assets/scripts/'
+    },
+    images: {
+        src: './src/assets/images/*',
+        dest: './dist/assets/images/'
+    },
+    plugins: {
+        src: './src/assets/plugins/**',
+        dest: './dist/assets/plugins/'
+    },
+    fonts: {
+        src: './src/assets/fonts/*',
+        dest: './dist/assets/fonts/'
     }
 }
 
@@ -32,6 +44,9 @@ function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.images.src, images);
+    gulp.watch(paths.fonts.src, fonts);
+    gulp.watch(paths.plugins.src, plugins);
 }
 
 // следим за build и релоадим браузер
@@ -54,6 +69,24 @@ function templates() {
         .pipe(gulp.dest(paths.root));
 }
 
+// images
+function images() {
+    return gulp.src(paths.images.src)
+        .pipe(gulp.dest(paths.images.dest));
+}
+
+// plugins
+function plugins() {
+    return gulp.src(paths.plugins.src)
+        .pipe(gulp.dest(paths.plugins.dest));
+}
+
+// fonts
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
+}
+
 // scss
 function styles() {
     return gulp.src(paths.styles.main)
@@ -74,10 +107,12 @@ function scripts() {
 exports.templates = templates;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.images = images;
+exports.plugins = plugins;
 exports.clean = clean;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, scripts),
+    gulp.parallel(styles, templates, scripts, images, plugins, fonts),
     gulp.parallel(watch, server)
 ));

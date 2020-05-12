@@ -1,10 +1,73 @@
-extends ../auth.layout.pug
+extends ../main.layout.pug
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+
+  section.welcome
+    .container
+      .welcome__content
+        .welcome__left
+          img(src="/assets/images/burger.png", alt="сочный бургер")
+        .welcome__right
+          h2.title Мы делаем
+          h3.subtitle натуральные бургеры
+
+
+
+
+
+
+
+  section.section.we
+    p we
+  section.section.prices
+    p prices
+  section.section.team
+    p team
+  section.section.menu
+    <ul class="menu">
+      <li class="item">
+        <div class="trigger">
+          <p>SLIDE 1 SLIDE 1</p>
+        </div>
+        <div class="content">
+          <h3>SLIDE 1</h3>
+          <p>text1</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="trigger">
+          <p>SLIDE 2 SLIDE 2</p>
+        </div>
+        <div class="content">
+          <h3>SLIDE 2</h3>
+          <p>text2</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="trigger">
+          <p>SLIDE 3 SLIDE 3</p>
+        </div>
+        <div class="content">
+          <h3>SLIDE 3</h3>
+          <p>text3</p>
+        </div>
+      </li>
+    </ul>
+
+  section.section.comments
+    p comments
+  section.section.how-work
+    p how-work
+  section.section.order
+    p order
+  section.section.map
+    p map
+
+block scripts
+  script(src="assets/plugins/jquery3.5.1.js")
+  script(src="https://alvarotrigo.com/fullPage/dist/fullpage.dragAndMove2.limited.min.js?v12")
+  script(src="https://alvarotrigo.com/fullPage/fullpage.extensions.min.js")
+
+  script(src="assets/scripts/main.bundle.js")
+
+
