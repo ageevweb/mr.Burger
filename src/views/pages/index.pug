@@ -12,7 +12,7 @@ block content
     .welcome__arrow-down
       img(src="/assets/images/arrow.png", alt="следующая секция")
 
-  section.section.virtues
+  section.virtues
     .container.virtues__container
       h2.title.title-black Мы лучшие
       ul.virtues__list
@@ -29,10 +29,137 @@ block content
           h4.virtues__title Натуральные ингредиенты
           p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
     
-  section.section.prices
-    p prices
+  section.burgers
+    .container.burgers__container
+      .slider-arrow-burger-prev
+        img(src="/assets/images/arrow.png", alt="предыдущий слайдер")
+      .slider-arrow-burger-next
+        img(src="/assets/images/arrow.png", alt="следующий слайдер")
+
+      .burgers__slider
+        .burgers-item
+          button.composition-btn
+            .composition-btn__icon
+              img(src="/assets/images/comp-icon.png", alt="состав")
+            span.composition-btn__text состав
+           
+          ul.composition
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co1.png", alt="Говядина")
+              .composition__title Говядина
+              .composition__weight 300г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co2.png", alt="Булочки")
+              .composition__title Булочки
+              .composition__weight 100г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co3.png", alt="Зелень")
+              .composition__title Зелень
+              .composition__weight 100г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co4.png", alt="Соус")
+              .composition__title Соус
+              .composition__weight 50г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co5.png", alt="Зелень")
+              .composition__title Овощи
+              .composition__weight 70г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co6.png", alt="Сыр")
+              .composition__title Сыр
+              .composition__weight 110г
+
+          .burgers-item__mass
+            .mass__icon
+              img(src="/assets/images/kkal.png", alt="килокалории")
+            span.mass__inner 1200
+            span.mass__kkal ккал
+
+          .burgers-item__wrap
+            .burgers-item__left
+              img(src="/assets/images/burg1.png", alt="Dark BEEF Burger")
+            .burgers-item__right
+              h2.title.title-white Dark BEEF Burger
+              p.burgers-item__desc Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+              .burgers-item__row
+                .burgers-item__price 500 <span>рублей</span>
+                .burgers-item__btn.btnn заказать
+
+        .burgers-item
+          button.composition-btn
+            .composition-btn__icon
+              img(src="/assets/images/comp-icon.png", alt="состав")
+            span.composition-btn__text состав
+        
+          ul.composition
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co1.png", alt="Говядина")
+              .composition__title Говядина
+              .composition__weight 310г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co2.png", alt="Булочки")
+              .composition__title Булочки
+              .composition__weight 120г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co3.png", alt="Зелень")
+              .composition__title Зелень
+              .composition__weight 90г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co4.png", alt="Соус")
+              .composition__title Соус
+              .composition__weight 20г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co5.png", alt="Зелень")
+              .composition__title Овощи
+              .composition__weight 70г
+            li.composition__item
+              .composition__icon
+                img(src="/assets/images/co6.png", alt="Сыр")
+              .composition__title Сыр
+              .composition__weight 110г
+
+          .burgers-item__mass
+            .mass__icon
+              img(src="/assets/images/kkal.png", alt="килокалории")
+            span.mass__inner 900
+            span.mass__kkal ккал
+
+          .burgers-item__wrap
+            .burgers-item__left
+              img(src="/assets/images/NYC-Diner-Bacon-Cheeseburger.png", alt="Dark BEEF Burger")
+            .burgers-item__right
+              h2.title.title-white NYC Bacon Cheeseburger
+              p.burgers-item__desc Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+              .burgers-item__row
+                .burgers-item__price 500 <span>рублей</span>
+                .burgers-item__btn.btnn заказать
+
   section.section.team
     p team
+
+
+
+
+
+
+
+
+
+
+
+
+    
   section.section.menu
     <ul class="menu">
       <li class="item">
@@ -75,8 +202,10 @@ block content
 
 block scripts
   script(src="assets/plugins/jquery3.5.1.js")
-  script(src="https://alvarotrigo.com/fullPage/dist/fullpage.dragAndMove2.limited.min.js?v12")
-  script(src="https://alvarotrigo.com/fullPage/fullpage.extensions.min.js")
+  script(src="assets/plugins/slick.min.js")
+
+  //- script(src="https://alvarotrigo.com/fullPage/dist/fullpage.dragAndMove2.limited.min.js?v12")
+  //- script(src="https://alvarotrigo.com/fullPage/fullpage.extensions.min.js")
 
   script(src="assets/scripts/main.bundle.js")
 

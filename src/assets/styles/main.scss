@@ -1,4 +1,7 @@
-@import 'normalize.css';
+// @import 'normalize.css';
+@import './plugins/slick.scss';
+
+
 @import './layout/base.scss';
 @import './layout/fonts.scss';
 @import './blocks/*.scss';
