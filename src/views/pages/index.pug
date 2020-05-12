@@ -3,22 +3,32 @@ extends ../main.layout.pug
 block content
 
   section.welcome
-    .container
-      .welcome__content
-        .welcome__left
-          img(src="/assets/images/burger.png", alt="сочный бургер")
-        .welcome__right
-          h2.title Мы делаем
-          h3.subtitle натуральные бургеры
+    .container.welcome__container
+      .welcome__left
+        img(src="/assets/images/burger.png", alt="сочный бургер")
+      .welcome__right
+        h2.title Мы делаем
+        h3.subtitle натуральные бургеры
+    .welcome__arrow-down
+      img(src="/assets/images/arrow.png", alt="следующая секция")
 
-
-
-
-
-
-
-  section.section.we
-    p we
+  section.section.virtues
+    .container.virtues__container
+      h2.title.title-black Мы лучшие
+      ul.virtues__list
+        li.virtues__item
+          img.virtues__icon(src="/assets/images/vir1.png", alt="свежее мясо")
+          h4.virtues__title 100% свежее мясо
+          p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+        li.virtues__item
+          img.virtues__icon(src="/assets/images/vir2.png", alt="Ручная  сборка")
+          h4.virtues__title Ручная  сборка
+          p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+        li.virtues__item
+          img.virtues__icon(src="/assets/images/vir3.png", alt="Натуральные ингредиенты")
+          h4.virtues__title Натуральные ингредиенты
+          p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+    
   section.section.prices
     p prices
   section.section.team

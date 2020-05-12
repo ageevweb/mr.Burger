@@ -3,4 +3,32 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__left{
+    width: 50%;
+  }
+
+  &__right{
+    width: 50%;
+    padding-left: 30px;
+  }
+
+  &__arrow-down{
+    position: absolute;
+    bottom: 40px;
+    right: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
 }

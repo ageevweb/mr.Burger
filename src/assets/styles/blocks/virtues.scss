@@ -1,0 +1,51 @@
+.virtues{
+  background-image: url("/assets/images/we.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item{
+    max-width: 310px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  &__icon{
+    margin-bottom: 30px;
+  }
+
+  &__title{
+    color: #2f3234;
+    font-family: 'lifehack';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.14px;
+    letter-spacing: -0.6px;
+    margin-bottom: 20px;
+  }
+
+  &__desc{
+    font-family: 'ubuntu-light';
+    opacity: 0.8;
+    color: #2f3234;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24.07px;
+  }
+}
