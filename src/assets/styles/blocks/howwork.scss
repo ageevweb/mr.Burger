@@ -1,0 +1,20 @@
+.how-work{
+  background-image: url("/assets/images/howwork.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container{
+    text-align: center;
+  }
+
+  &__video{
+    max-width: 560px;
+    margin: 0 auto;
+    margin-top: 65px;
+  }
+}
