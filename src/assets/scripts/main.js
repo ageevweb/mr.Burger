@@ -68,7 +68,7 @@ document.querySelector('.btnn-order').onclick = (e) => {
       orderFloor = document.querySelector('#orderFloor').value,
       orderComm = document.querySelector('#orderComm').value
   
-    
+
   
 
   
@@ -77,4 +77,19 @@ document.querySelector('.btnn-order').onclick = (e) => {
 document.querySelector('.btnn-reset').onclick = (e) => {
   e.preventDefault()
   document.querySelector('.order-form').reset()
+}
+
+
+ymaps.ready(init);
+function init(){
+  var myMap = new ymaps.Map("map", {
+      // Координаты центра карты.
+      // Порядок по умолчанию: «широта, долгота».
+      // Чтобы не определять координаты центра карты вручную,
+      // воспользуйтесь инструментом Определение координат.
+      center: [55.76, 37.64],
+      // Уровень масштабирования. Допустимые значения:
+      // от 0 (весь мир) до 19.
+      zoom: 7
+  });
 }
