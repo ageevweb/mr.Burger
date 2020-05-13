@@ -33,3 +33,23 @@ document.querySelectorAll('.team-accord__header').forEach(function(elem){
   }
 })
 
+
+
+
+document.querySelectorAll('.menu-acco__header').forEach(function(elem){
+  elem.onclick = function(){
+
+    document.querySelectorAll('.menu-acco__header').forEach(function(elem2){
+      elem2.classList.remove("active");
+      elem2.nextElementSibling.style.maxWidth = null;
+    })
+
+    this.classList.toggle("active");
+    var contentAcc = this.nextElementSibling;
+    if (contentAcc.style.maxWidth){
+      contentAcc.style.maxWidth = null;
+    } else {
+      contentAcc.style.maxWidth = '600px';
+    } 
+  }
+})
