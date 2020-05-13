@@ -53,3 +53,28 @@ document.querySelectorAll('.menu-acco__header').forEach(function(elem){
     } 
   }
 })
+
+
+
+
+document.querySelector('.btnn-order').onclick = (e) => {
+  e.preventDefault();
+  
+  let orderName = document.querySelector('#orderName').value,
+      orderPhone = document.querySelector('#orderPhone').value,
+      orderStreet = document.querySelector('#orderStreet').value,
+      orderK = document.querySelector('#orderK').value,
+      orderApp = document.querySelector('#orderApp').value,
+      orderFloor = document.querySelector('#orderFloor').value,
+      orderComm = document.querySelector('#orderComm').value
+  
+    
+  
+
+  
+}
+
+document.querySelector('.btnn-reset').onclick = (e) => {
+  e.preventDefault()
+  document.querySelector('.order-form').reset()
+}

@@ -139,7 +139,7 @@ block content
             .burgers-item__left
               img(src="/assets/images/NYC-Diner-Bacon-Cheeseburger.png", alt="Dark BEEF Burger")
             .burgers-item__right
-              h2.title.title-white NYC Bacon Cheeseburger
+              h2.title.title-white NYC Bacon 
               p.burgers-item__desc Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
               .burgers-item__row
                 .burgers-item__price 500 <span>рублей</span>
@@ -259,6 +259,56 @@ block content
       .how-work__video
        <iframe width="100%" height="315" src="https://www.youtube.com/embed/L6yX6Oxy_J8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+  section.order
+    .container.order__container
+      .title закажите доставку
+      .hint-error Заполните корректно все поля с звездочкой
+      form.order-form
+        .order-form__left
+          .order-form__row
+            .order-form__item.order-form__item-width48
+              label.order-form__label Имя *
+              input#orderName.order-form__input
+            .order-form__item.order-form__item-width48
+              label.order-form__label Телефон *
+              input#orderPhone.order-form__input
+          .order-form__row
+            .order-form__item.order-form__item-width100
+              label.order-form__label Улица *
+              input#orderStreet.order-form__input
+          .order-form__row
+            .order-form__item.order-form__item-width23
+              label.order-form__label Дом *
+              input#orderBuild.order-form__input
+            .order-form__item.order-form__item-width23
+              label.order-form__label Корпус
+              input#orderK.order-form__input
+            .order-form__item.order-form__item-width23
+              label.order-form__label Квартира *
+              input#orderApp.order-form__input
+            .order-form__item.order-form__item-width23
+              label.order-form__label Этаж
+              input#orderFloor.order-form__input
+
+        .order-form__right
+          .order-form__row
+            .order-form__item.order-form__item-width100
+              label.order-form__label Комментарий
+              textarea#orderComm.order-form__textarea
+          .order-form__row.order-form__row-start
+            .order-form__radio
+              input#rad1.radiobutton(type="radio" name="pay" value="Потребуется сдача" checked)
+              label.order-form__label.order-form__label-radio(for="rad1") Потребуется сдача
+            .order-form__radio
+              input#rad2.radiobutton(type="radio" name="pay" value="Оплата по карте")
+              label.order-form__label.order-form__label-radio(for="rad2") Оплата по карте
+          .order-form__row
+            input#checkb.checkbox(type="checkbox" name="dontcall" value="value" checked)
+            label.order-form__label.order-form__label-checkbox(for="checkb") Не перезванивать
+            
+          .order-form__row.order-form__row-start
+            button.btnn.btnn-order(type='submit') заказать
+            button.btnn-reset очистить
 
 
 
@@ -285,8 +335,7 @@ block content
 
 
 
-  section.section.order
-    p order
+
   section.section.map
     p map
 
