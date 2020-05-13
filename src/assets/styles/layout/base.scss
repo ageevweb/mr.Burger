@@ -56,6 +56,14 @@ section{
     &:hover{
         background-color: #c1401e;
     }
+
+    &-grey{
+        background-color: #2f3234;
+
+        &:hover{
+            background-color: #1f2122;
+        }
+    }
 }
 
 .title{

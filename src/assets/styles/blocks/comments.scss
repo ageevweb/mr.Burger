@@ -1,0 +1,105 @@
+.comments{
+  background-color: #303335;
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  &__item{
+    width: 25%;
+    height: 50%;
+    position: relative;
+
+    &:hover{
+      cursor: pointer;
+
+      .comments__inner{
+        opacity: 1;
+      }
+
+    }
+
+    &-1{
+      background: url("/assets/images/pers1.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &-2{
+      background: url("/assets/images/pers2.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &-3{
+      background: url("/assets/images/pers3.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &-4{
+      background: url("/assets/images/pers4.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &-5{
+      background: url("/assets/images/pers5.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &-6{
+      background: url("/assets/images/pers6.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &-7{
+      background: url("/assets/images/pers7.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &-8{
+      background: url("/assets/images/pers8.jpg");    
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+  }
+
+  &__inner{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(47, 50, 52, .8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity:0;
+    transition: linear all .3s;
+  }
+
+  &__name{
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  &__text{
+    color: #ffffff;
+    font-family: Ubuntu-light;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
