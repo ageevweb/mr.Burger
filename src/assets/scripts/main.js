@@ -114,3 +114,26 @@ document.querySelector('.adapt__btn').onclick = function(){
     this.classList.toggle('active')
   }
 }
+
+
+
+document.querySelectorAll('.adapt-item').forEach((elem)=> {
+  elem.onclick = function(){
+    document.querySelector('.adapt__btn').classList.remove('active')
+    document.querySelector('#b').checked = false
+    console.log(document.documentElement.clientHeight)
+  }
+})
+
+
+window.onhashchange = function() { 
+  let hash = window.location.hash.substring(1); 
+  console.log(hash);
+  if (hash == 'welcomePage') {
+    document.querySelector('.adapt__btn').style.display = 'none';
+  } else {
+    document.querySelector('.adapt__btn').style.display = 'block';
+
+  }
+
+}

@@ -12,8 +12,8 @@ html(lang="ru")
     link(rel='stylesheet' href='assets/styles/main.min.css')
   body
     .wrapper
+      include ./common/adaptiveMenu.pug
       .maincontent#fullpage
-        include ./common/adaptiveMenu.pug
         include ./common/header.pug
         block content
         include ./common/footer.pug
