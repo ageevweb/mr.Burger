@@ -37,10 +37,6 @@ body {
     position: relative;
 }
 
-section{
-    height: 100vh;
-}
-
 button{
     outline: none;
 }
@@ -97,4 +93,6 @@ button{
 }
 
 
-    
+.map__wrap{
+    height: 100%;
+}

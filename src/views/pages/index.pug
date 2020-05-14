@@ -2,7 +2,7 @@ extends ../main.layout.pug
 
 block content
 
-  section.welcome
+  section.section.section.welcome
     .container.welcome__container
       .welcome__left
         img(src="/assets/images/burger.png", alt="сочный бургер")
@@ -12,7 +12,34 @@ block content
     .welcome__arrow-down
       img(src="/assets/images/arrow.png", alt="следующая секция")
 
-  section.virtues
+    <ul id="menu">
+      <li class="menu-active menu-wordpress">
+        <a href="#" rel="noopener">
+            <span id="menu-theme-desktop">WordPress</span>
+            <span id="menu-theme-mobile">WordPress</span>
+        </a>
+        <ul class="submenu plugins">
+          <li>
+            <a class="plugins-theme" href="https://alvarotrigo.com/fullPage/utils/wordpress.html">
+                <i></i>
+                Theme
+            </a>
+          </li>
+          <li>
+            <a class="plugins-plugin" href="https://alvarotrigo.com/fullPage/wordpress-plugin-gutenberg/">
+                <i></i>
+                Plugin Gutenberg
+            </a>
+          </li>
+          <li>
+            <a class="plugins-plugin" href="https://alvarotrigo.com/fullPage/wordpress-plugin-elementor/">
+                <i></i>
+                Plugin Elementor
+            </a>
+          </li>
+      </ul>
+
+  section.section.virtues
     .container.virtues__container
       h2.title.title-black Мы лучшие
       ul.virtues__list
@@ -29,7 +56,7 @@ block content
           h4.virtues__title Натуральные ингредиенты
           p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
     
-  section.burgers
+  section.section.burgers
     .container.burgers__container
       .slider-arrow-burger-prev
         img(src="/assets/images/arrow.png", alt="предыдущий слайдер")
@@ -145,7 +172,7 @@ block content
                 .burgers-item__price 500 <span>рублей</span>
                 .burgers-item__btn.btnn заказать
 
-  section.team
+  section.section.team
     .team__bg
     .container.team__container
       .team__wrap
@@ -188,7 +215,7 @@ block content
                 .team-accord__profession Оператор
                 p.team-accord__text С радостью поможет подобрать идеальный бургер и оформить заказ.
 
-  section.menu
+  section.section.menu
     .container.menu__container
       .title.title-white меню
     .menu-acco
@@ -210,7 +237,7 @@ block content
         .menu-acco__body 
           p Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
 
-  section.comments
+  section.section.comments
     .comments__list
       .comments__item.comments__item-1
         .comments__inner
@@ -253,13 +280,13 @@ block content
           .comments__text Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
           .comments__btn.btnn.btnn-grey подробнее
 
-  section.how-work
+  section.section.how-work
     .container.how-work__container
       .title.title-black как мы работаем
       .how-work__video
        <iframe width="100%" height="315" src="https://www.youtube.com/embed/L6yX6Oxy_J8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  section.order
+  section.section.order
     .container.order__container
       .title закажите доставку
       .hint-error Заполните корректно все поля с звездочкой
@@ -310,42 +337,15 @@ block content
             button.btnn.btnn-order(type='submit') заказать
             button.btnn-reset очистить
 
+  section.section.map
+    .map__wrap#map
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  section#map.map
 
 block scripts
   script(src="assets/plugins/jquery3.5.1.js")
+  script(src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js")
   script(src="assets/plugins/slick.min.js")
   script(src="https://api-maps.yandex.ru/2.1/?apikey=c9ab8af1-5bf4-4499-a21b-58f63618638d&lang=ru_RU" type="text/javascript")
-
-  //- script(src="https://alvarotrigo.com/fullPage/dist/fullpage.dragAndMove2.limited.min.js?v12")
-  //- script(src="https://alvarotrigo.com/fullPage/fullpage.extensions.min.js")
-
   script(src="assets/scripts/main.bundle.js")
 
 

@@ -93,3 +93,32 @@ function init(){
       zoom: 7
   });
 }
+
+
+
+new fullpage('#fullpage', {
+  // licenseKey: 'YOUR KEY HERE',
+  // sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
+  // anchors:['firstPage', 'secondPage', 'thirdPage']
+
+  menu: '#menu',
+	lockAnchors: false,
+	anchors:['welcomePage', 'virtuesPage', 'burgersPage', 'teamPage', 'menuPage', 'commentsPage', 'howWorkPage', 'orderPage', 'mapPage'],
+	navigation: false,
+	navigationPosition: 'right',
+	navigationTooltips: ['firstSlide', 'secondSlide'],
+});
+
+
+// new fullpage('#fullpage', {
+//   anchors: ['page1', 'page2', 'page3', 'page4'],
+//   navigationTooltips: ['fullPage', 'Open', 'Easy', 'Touch'],
+//   css3: true,
+//   scrollingSpeed: 1000,
+//   navigation: true,
+//   slidesNavigation: true,
+//   responsiveHeight: 330,
+//   dragAndMove: true,
+//   dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+//   controlArrows: false
+// });
