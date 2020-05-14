@@ -18,16 +18,19 @@ block content
       ul.virtues__list
         li.virtues__item
           img.virtues__icon(src="/assets/images/vir1.png", alt="свежее мясо")
-          h4.virtues__title 100% свежее мясо
-          p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+          .virtues__desc
+            h4.virtues__title 100% свежее мясо
+            p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
         li.virtues__item
           img.virtues__icon(src="/assets/images/vir2.png", alt="Ручная  сборка")
-          h4.virtues__title Ручная  сборка
-          p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+          .virtues__desc
+            h4.virtues__title Ручная  сборка
+            p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
         li.virtues__item
           img.virtues__icon(src="/assets/images/vir3.png", alt="Натуральные ингредиенты")
-          h4.virtues__title Натуральные ингредиенты
-          p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+          .virtues__desc 
+            h4.virtues__title Натуральные ингредиенты
+            p.virtues__desc Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
     
   section.section.burgers
     .container.burgers__container
@@ -152,7 +155,7 @@ block content
         .title команда
         ul.team-accord
           li.team-accord__item
-            .team-accord__header Ричард Джеймс
+            .team-accord__header.active Ричард Джеймс
               .team-accord__triangle
             .team-accord__body 
               .team-accord__avatar
@@ -190,7 +193,7 @@ block content
 
   section.section.menu
     .container.menu__container
-      .title.title-white меню
+      .title.title-white.title-menu меню
     .menu-acco
       .menu-acco__item
         .menu-acco__header.menu-acco__header-1
@@ -312,6 +315,7 @@ block content
 
   section.section.map
     .map__wrap#map
+    include ../common/footer.pug
 
 
 block scripts

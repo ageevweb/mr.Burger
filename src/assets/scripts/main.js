@@ -133,7 +133,6 @@ window.onhashchange = function() {
     document.querySelector('.adapt__btn').style.display = 'none';
   } else {
     document.querySelector('.adapt__btn').style.display = 'block';
-
   }
 
 }

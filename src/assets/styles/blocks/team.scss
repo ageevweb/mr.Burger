@@ -85,6 +85,10 @@
   color: #f9b43b;
 }
 
+.active.team-accord__header+.team-accord__body  {
+  max-height: 100%;
+}
+
 .active.team-accord__header>.team-accord__triangle {
   border: 6px solid transparent; border-top: 6px solid #f9b43b;
   transform: rotate(180deg);
