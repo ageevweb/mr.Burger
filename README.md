@@ -1,4 +1,3 @@
-## Gulp-webpack 2018
 
 #### Для работы сборки у вас должны быть установлены
 * npm 5
@@ -8,3 +7,6 @@
 1. clone this repo
 2. npm i
 3. gulp
+
+#### Плагин
+https://github.com/alvarotrigo/fullPage.js
