@@ -67,36 +67,70 @@ document.querySelector('.btnn-order').onclick = (e) => {
       orderK = document.querySelector('#orderK'),
       orderApp = document.querySelector('#orderApp'),
       orderFloor = document.querySelector('#orderFloor'),
-      orderComm = document.querySelector('#orderComm')
+      orderComm = document.querySelector('#orderComm'),
+
+      modalErrName = 'Внимание!',
+      modalErrDesc = 'Корректно заполните все поля отмеченные звездочкой'
+
+    
 
       if(orderName.value.length < 1){
         orderName.classList.add('inp-error')
+        openModal(modalErrName, modalErrDesc);
+        return false;
       } else { 
         orderName.classList.remove('inp-error')
       }
 
       if(orderPhone.value.length < 16){
-        orderPhone.classList.add('inp-error')
+        orderPhone.classList.add('inp-error');
+        openModal(modalErrName, modalErrDesc);
+        return false;
       } else { 
-        orderPhone.classList.remove('inp-error')
+        orderPhone.classList.remove('inp-error');
       }
 
       if(orderStreet.value.length < 1){
-        orderStreet.classList.add('inp-error')
+        orderStreet.classList.add('inp-error');
+        openModal(modalErrName, modalErrDesc);
+        return false;
       } else { 
         orderStreet.classList.remove('inp-error')
       }
 
       if(orderBuild.value.length < 1){
-        orderBuild.classList.add('inp-error')
+        orderBuild.classList.add('inp-error');
+        openModal(modalErrName, modalErrDesc);
+        return false;
       } else { 
         orderBuild.classList.remove('inp-error')
       }
-  
 
-  
+      let data = {
+        orderName: orderName.value,
+        orderPhone: orderPhone.value,
+        orderStreet: orderStreet.value,
+        orderBuild: orderBuild.value,
+        orderK: orderK.value,
+        orderApp: orderApp.value,
+        orderFloor: orderFloor.value,
+        orderComm: orderComm.value
+      }
+      // console.log(data);
 
-  
+      fetch('https://burgers.ageevweb.com/mail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: data
+      });
+
+
+
+
+
+
 }
 
 document.querySelector('.btnn-reset').onclick = (e) => {
@@ -247,16 +281,19 @@ let mask = new IMask(elementTele, maskOptions);
 
 
 
-
+function openModal(header, body){
+  document.querySelector('.modal__name').innerText = header;
+  document.querySelector('.modal__body').innerText = body
+  document.querySelector('.modal-bg').classList.add('active');
+  document.querySelector('.modal').classList.add('active');
+}
 
 
 document.querySelectorAll('.comments__btn').forEach(function(elem){
   elem.onclick = function(){
-    document.querySelector('.modal__name').innerText = this.previousElementSibling.previousElementSibling.innerText;
-    document.querySelector('.modal__body').innerText = this.previousElementSibling.innerText
-    
-    document.querySelector('.modal-bg').classList.add('active');
-    document.querySelector('.modal').classList.add('active');
+    let a = this.previousElementSibling.previousElementSibling.innerText;
+    let b = this.previousElementSibling.innerText
+    openModal(a, b);
   }
 })
 
