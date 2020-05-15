@@ -14,6 +14,9 @@ if ( $method === 'POST' ) {
 
 	foreach ( $_POST as $key => $value ) {
 		// if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			if ( $value != ""){
+				$value = 'не указано'
+			}
 			$message .= "
 			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
 				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
@@ -53,3 +56,5 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 
 
 mail($admin_email, adopt($form_subject), $message, $headers );
+
+echo 'success';

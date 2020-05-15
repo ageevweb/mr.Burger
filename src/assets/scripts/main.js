@@ -118,13 +118,20 @@ document.querySelector('.btnn-order').onclick = (e) => {
       }
       // console.log(data);
 
-      fetch('https://burgers.ageevweb.com/mail.php', {
+      fetch('mail.php', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        },
         body: data
-      });
+      })
+      .then(res => {
+        console.log(res)
+      })
+      .then(res => {
+        console.log(res.text())
+      })
+
+      
+      document.querySelector('.order-form').reset();
+      openModal('Cпасибо!', 'Ваш заказ сформирован, оператор свяжется с вами в ближайшее время!');
 
 
 
