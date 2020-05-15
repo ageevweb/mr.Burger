@@ -12,7 +12,10 @@ html(lang="ru")
   body
     .wrapper
       include ./common/adaptiveMenu.pug
+      include ./common/modals.pug
+
       .maincontent#fullpage
         include ./common/header.pug
         block content
+        
     block scripts

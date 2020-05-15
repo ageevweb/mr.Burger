@@ -239,3 +239,39 @@ let maskOptions = {
     lazy: true
 }
 let mask = new IMask(elementTele, maskOptions);
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.comments__btn').forEach(function(elem){
+  elem.onclick = function(){
+    document.querySelector('.modal__name').innerText = this.previousElementSibling.previousElementSibling.innerText;
+    document.querySelector('.modal__body').innerText = this.previousElementSibling.innerText
+    
+    document.querySelector('.modal-bg').classList.add('active');
+    document.querySelector('.modal').classList.add('active');
+  }
+})
+
+document.querySelector('.modal__close').onclick = function(){
+  document.querySelector('.modal-bg').classList.remove('active');
+  document.querySelector('.modal').classList.remove('active');
+}
+
+document.querySelector('.modal-bg').onclick = function(){
+  document.querySelector('.modal-bg').classList.remove('active');
+  document.querySelector('.modal').classList.remove('active');
+}
+
+
+
+
+
+
