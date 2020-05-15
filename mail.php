@@ -15,7 +15,7 @@ if ( $method === 'POST' ) {
 	foreach ( $_POST as $key => $value ) {
 		// if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
 			if ( $value != ""){
-				$value = 'не указано'
+				$value = 'не указано';
 			}
 			$message .= "
 			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "

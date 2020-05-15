@@ -7,6 +7,7 @@ $(document).ready(function(){
 });
 
 
+
 document.querySelectorAll('.composition-btn').forEach((elem)=>{
   elem.onclick = () =>{
     elem.classList.toggle('show-composition');
@@ -120,18 +121,18 @@ document.querySelector('.btnn-order').onclick = (e) => {
 
       fetch('mail.php', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: data
       })
-      .then(res => {
-        console.log(res)
-      })
-      .then(res => {
-        console.log(res.text())
+      .then(() => {
+        document.querySelector('.order-form').reset();
+        openModal('Cпасибо!', 'Ваш заказ сформирован, оператор свяжется с вами в ближайшее время!');
       })
 
+
       
-      document.querySelector('.order-form').reset();
-      openModal('Cпасибо!', 'Ваш заказ сформирован, оператор свяжется с вами в ближайшее время!');
 
 
 
@@ -256,6 +257,13 @@ document.querySelector('.adapt__btn').onclick = function(){
 
 
 document.querySelectorAll('.adapt-item').forEach((elem)=> {
+  elem.onclick = function(){
+    document.querySelector('.adapt__btn').classList.remove('active')
+    document.querySelector('#b').checked = false
+  }
+})
+
+document.querySelectorAll('.adapt__btn-order').forEach((elem)=> {
   elem.onclick = function(){
     document.querySelector('.adapt__btn').classList.remove('active')
     document.querySelector('#b').checked = false
