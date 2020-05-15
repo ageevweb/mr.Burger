@@ -1,3 +1,5 @@
+#### host
+https://burgers.ageevweb.com/
 
 #### Для работы сборки у вас должны быть установлены
 * npm 5
@@ -12,6 +14,3 @@
 https://github.com/alvarotrigo/fullPage.js
 https://imask.js.org/guide.html
 
--2 модалс (спасибо + коммент)
-
--отправка формы => модалка => ресет 
