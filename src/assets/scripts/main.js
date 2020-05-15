@@ -60,13 +60,38 @@ document.querySelectorAll('.menu-acco__header').forEach(function(elem){
 document.querySelector('.btnn-order').onclick = (e) => {
   e.preventDefault();
   
-  let orderName = document.querySelector('#orderName').value,
-      orderPhone = document.querySelector('#orderPhone').value,
-      orderStreet = document.querySelector('#orderStreet').value,
-      orderK = document.querySelector('#orderK').value,
-      orderApp = document.querySelector('#orderApp').value,
-      orderFloor = document.querySelector('#orderFloor').value,
-      orderComm = document.querySelector('#orderComm').value
+  let orderName = document.querySelector('#orderName'),
+      orderPhone = document.querySelector('#orderPhone'),
+      orderStreet = document.querySelector('#orderStreet'),
+      orderBuild = document.querySelector('#orderBuild')
+      orderK = document.querySelector('#orderK'),
+      orderApp = document.querySelector('#orderApp'),
+      orderFloor = document.querySelector('#orderFloor'),
+      orderComm = document.querySelector('#orderComm')
+
+      if(orderName.value.length < 1){
+        orderName.classList.add('inp-error')
+      } else { 
+        orderName.classList.remove('inp-error')
+      }
+
+      if(orderPhone.value.length < 16){
+        orderPhone.classList.add('inp-error')
+      } else { 
+        orderPhone.classList.remove('inp-error')
+      }
+
+      if(orderStreet.value.length < 1){
+        orderStreet.classList.add('inp-error')
+      } else { 
+        orderStreet.classList.remove('inp-error')
+      }
+
+      if(orderBuild.value.length < 1){
+        orderBuild.classList.add('inp-error')
+      } else { 
+        orderBuild.classList.remove('inp-error')
+      }
   
 
   
@@ -88,8 +113,8 @@ var placemarks = [
         hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
         balloonContent: [
             '<div class="map__balloon">',
-            '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-            'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д. 19',
+            '<img class="map__burger-img" src="/assets/images/burger.png" alt="Бургер"/>',
+            '<p>Самые вкусные бургеры у нас!<br>Заходите по адресу: ул. Литераторов, д. 19</p>',
             '</div>'
         ]
     },
@@ -99,8 +124,8 @@ var placemarks = [
         hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
         balloonContent: [
             '<div class="map__balloon">',
-            '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-            'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
+            '<img class="map__burger-img" src="/assets/images/burger.png" alt="Бургер"/>',
+            '<p>Самые вкусные бургеры у нас!<br>Заходите по адресу: Малый проспект В О, д 64</p>',
             '</div>'
         ]
     },
@@ -110,8 +135,8 @@ var placemarks = [
         hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
         balloonContent: [
             '<div class="map__balloon">',
-            '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-            'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
+            '<img class="map__burger-img" src="/assets/images/burger.png" alt="Бургер"/>',
+            '<p>Самые вкусные бургеры у нас!<br>Заходите по адресу: наб. реки Фонтанки, д. 56</p>',
             '</div>'
         ]
     }
@@ -144,7 +169,7 @@ function init() {
     var clusterer = new ymaps.Clusterer({
         clusterIcons: [
             {
-                href: 'img/burger.png',
+                href: '/assets/images/burger.png',
                 size: [100, 100],
                 offset: [-50, -50]
             }
@@ -182,9 +207,6 @@ new fullpage('#fullpage', {
 
 
 document.querySelector('.adapt__btn').onclick = function(){
-  // console.log(this)
-  // this.classList.toggle('active')
-
   if(document.querySelector('#b').checked){
     this.classList.toggle('active')
   }
@@ -196,14 +218,12 @@ document.querySelectorAll('.adapt-item').forEach((elem)=> {
   elem.onclick = function(){
     document.querySelector('.adapt__btn').classList.remove('active')
     document.querySelector('#b').checked = false
-    console.log(document.documentElement.clientHeight)
   }
 })
 
 
 window.onhashchange = function() { 
-  let hash = window.location.hash.substring(1); 
-  console.log(hash);
+  let hash = window.location.hash.substring(1);
   if (hash == 'welcomePage') {
     document.querySelector('.adapt__btn').style.display = 'none';
   } else {
@@ -211,3 +231,11 @@ window.onhashchange = function() {
   }
 
 }
+
+
+let elementTele = document.getElementById('orderPhone');
+let maskOptions = {
+    mask: '+7(000)000-00-00',
+    lazy: true
+}
+let mask = new IMask(elementTele, maskOptions);

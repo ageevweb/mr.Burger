@@ -10,3 +10,8 @@
 
 #### Плагин
 https://github.com/alvarotrigo/fullPage.js
+https://imask.js.org/guide.html
+
+-2 модалс (спасибо + коммент)
+
+-отправка формы => модалка => ресет 
